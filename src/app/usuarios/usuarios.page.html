@@ -1,0 +1,55 @@
+<ion-header>
+ 
+  <ion-toolbar>
+    
+    <ion-title>Usuarios
+      <ion-icon name="accessibility"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+    
+      <ion-toolbar >
+    <ion-button expand="full" color="#6aeffc !important" class="searchB">
+      Sucursal
+      <ion-select >
+        <ion-select-option >Sucursal1</ion-select-option>
+        <ion-select-option value="2">Sucursal2</ion-select-option>
+      
+      </ion-select>
+    </ion-button>
+    <ion-searchbar class="search"></ion-searchbar>
+
+</ion-toolbar>
+</ion-header>
+<ion-content align="right">
+<ion-item >
+  <ion-label  color="light">Total de Usuarios:</ion-label>   
+  <ion-note slot="end" color="primary">50 Usuarios</ion-note>
+  <br><br></ion-item>
+  
+  <ion-row align-item-center class="boton" >
+  <icon-button   class="button button-large" [routerLink]="['/muro']">
+  <img src="assets/icon/11.png"  >
+  <ion-label color="light">Atleta </ion-label>
+  <ion-note color="light" >Num de Usuarios: </ion-note>
+  <!--{{ item.nombre }}--> 
+  10 Usuarios</icon-button></ion-row>
+  
+  <ion-row align-item-center class="boton"> 
+  <icon-button [routerLink]="['/muro']" class="button button-large" >
+    <img src="assets/icon/12.png" >
+    <ion-label color="light">Entrenador </ion-label> 
+    <ion-note color="light" >Num de Usuarios: </ion-note>  
+  <!--{{ item.nombre }}--> 
+  10 Usuarios</icon-button></ion-row>
+    
+  <ion-row align-item-center class="boton"> 
+    <icon-button [routerLink]="['/muro']" class="button button-large">
+      <img src="assets/icon/13.png" >
+      <ion-label color="light">Administrador </ion-label> 
+      <ion-note color="light" >Num de Usuarios: </ion-note> 
+      <!--{{ item.nombre }}--> 
+  10 Usuarios</icon-button></ion-row>
+  <ion-icon name="person-add-outline" color="secondary" class="icono" [routerLink]="['/agregar-usuario']"  ></ion-icon> 
+</ion-content>     
+
+

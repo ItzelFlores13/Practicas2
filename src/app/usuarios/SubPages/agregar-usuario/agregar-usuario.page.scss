@@ -1,0 +1,39 @@
+ion-title{
+    color:aliceblue;
+}
+ion-avatar.md img{
+    align-items: center;
+}
+ion-item ion-label{
+    color:aliceblue;
+}
+ion-button{
+    color: aliceblue;
+}
+.row {
+    display:   inline-block; 
+    flex-direction:  row-reverse; 
+    align-items:  center; 
+    justify-content:  center; 
+    margin-top:  20px;
+    margin-bottom: 2rem;
+    
+    ion-button {
+    display:   inline-block; 
+      
+      color:  #000; 
+      background-color:  #64effc; 
+      text-align:  center; 
+      border-radius:  12px; 
+      font-family:  'IBM Plex Sans', sans-serif; 
+      filter:  drop-shadow(0 4px 10px darken(#303030, 40%));         
+    }}
+    ion-content {
+        // overwrite inline styles
+        --offset-bottom: auto!important;
+        --overflow: hidden;
+        overflow: auto;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }

@@ -1,0 +1,36 @@
+<ion-header>
+	<ion-toolbar>	  
+	  <ion-title>Tipo de Clases
+		<ion-icon name="accessibility"></ion-icon>
+	  </ion-title>
+	</ion-toolbar>
+	  
+		<ion-toolbar >
+	  <ion-button expand="full" color="#6aeffc !important" class="searchB">
+		Sucursal
+		<ion-select >
+		  <ion-select-option >Sucursal1</ion-select-option>
+		  <ion-select-option value="2">Sucursal2</ion-select-option>
+		
+		</ion-select>
+	  </ion-button>
+	  <ion-searchbar class="search"></ion-searchbar>
+  
+  </ion-toolbar>
+  <div class="menu">
+  <ion-icon name="time-outline" class="icono"></ion-icon>
+  <ion-icon name="clipboard-outline" class="icono" [routerLink]="['/asistencia']"></ion-icon>
+  <ion-icon name="add-circle-outline" class="icono" [routerLink]="['/crear-clase']"></ion-icon>
+  </div>
+  
+  </ion-header>
+  <ion-content>
+		<ion-card router>
+		  <img src="assets/4.png"/>
+		  <ion-button [routerLink]="['/editar-clase']">
+			<ion-card-title >
+				NOMBRE DE LA CLASE			</ion-card-title></ion-button>
+			<ion-button color="#64effc"  [routerLink]="['/periodos']">VER PERIODOS</ion-button>		  
+		</ion-card>
+  </ion-content>
+  

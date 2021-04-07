@@ -1,0 +1,89 @@
+<ion-app class="fondo">
+  <!----->
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-menu-button ><img src="assets\icon\ss.jpg"></ion-menu-button>
+      </ion-buttons>
+      <ion-title >
+        <img src="assets\icon\logo-gris.png" style="height: 25px; align-content: center;">
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+    <!----->
+    <ion-content>
+      <ion-split-pane contentId="main-content">
+      <ion-menu contentId="main-content" type="overlay" side="end">
+        <ion-content>
+          <ion-list id="inbox-list">
+            <ion-menu-toggle  auto-hide="false" *ngFor="let p of appPages; let i = index">
+              <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+                <img slot="start" [src]="p.img" style="height: 45px;"   >
+                <ion-label>{{p.title}}</ion-label>
+                
+                
+                <!--
+                
+                  <ion-menu-toggle auto-hide="false" *ngFor="let sub of p.subList; let j=index">
+                    
+                      <ion-item lines="none" (click)="selectedIndex = j " routerDirection="root" [routerLink]="[sub.url]" detail="false" [class.selected]="selectedIndex == j" *ngFor="let t of sub.subList_title" text-wrap>
+                        <ion-label>{{t.title}}</ion-label>
+                      </ion-item>
+                   
+                  </ion-menu-toggle>
+                -->
+  
+  
+  
+              </ion-item>
+            </ion-menu-toggle>
+  
+  <!--
+            <ion-item lines="none" (click)="isRemainder === 1 ? isRemainder = 0 : isRemainder = 1">
+          <ion-icon name="notifications" slot="start"></ion-icon>
+          Remainder
+          <ion-icon slot="end" [name]="isRemainder? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+        </ion-item>
+  
+        <ion-menu-toggle auto-hide="false">
+          <ion-list lines="none">
+            <ion-item menuclose [hidden]="!isRemainder" [routerLink]="['/notifications']"
+              [queryParams]="{ type: 'birthday' }" menuClose class="sub-menu">
+              <ion-icon name="calendar" slot="start"></ion-icon>
+              Birthdays
+            </ion-item>
+          </ion-list>
+        </ion-menu-toggle>
+  
+  
+      -->
+      </ion-list>
+        </ion-content>
+      </ion-menu>
+      <ion-router-outlet id="main-content"></ion-router-outlet>
+    </ion-split-pane>
+  </ion-content>
+  
+  <!----->
+  <ion-footer>
+    <ion-toolbar style="text-align: center; ">
+      <icon-button [routerLink]="['/muro']">
+        <img src="assets/icon/dashboard.svg" style="height: 45px; ">
+      </icon-button>
+      
+      <icon-button [routerLink]="['/tercera']">
+        <img src="assets/icon/icono clases 2.png" style="height: 45px; padding-left: 10px;" >
+      </icon-button>
+  
+      <icon-button [routerLink]="['/cuarta']">
+        <img src="assets/icon/icono tienda.png" style="height: 45px;padding-left: 10px;">
+      </icon-button>
+  
+      <icon-button [routerLink]="['/quinta']">
+        <img src="assets/icon/entrenamientos.svg" style="height: 45px; padding-left: 10px;">
+      </icon-button>
+      </ion-toolbar>
+  </ion-footer>
+  
+  </ion-app>
+  

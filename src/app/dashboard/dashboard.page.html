@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content >
+    <ion-list-header ><b>INGRESOS TOTALES</b></ion-list-header>
+    <ion-card >
+  
+      <ion-slides>
+        
+        <ion-slide>
+          <div >
+            <ion-card-header>
+              <ion-card-title>Ingresos</ion-card-title>
+              <!---<ion-card-subtitle><datagrid>Ingresos totales</datagrid></ion-card-subtitle>-->
+            </ion-card-header>
+            <ion-card-content>
+              <canvas #lineChart></canvas>
+            </ion-card-content></div>
+      </ion-slide>
+
+
+      <ion-slide>
+        <div class="slide">
+    <ion-card-header>
+      <ion-card-title>Membresías</ion-card-title>
+      <!--<ion-card-subtitle><datagrid>Ingresos totales</datagrid></ion-card-subtitle>-->
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barChart></canvas>
+      </ion-card-content>
+    </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+  <ion-card-header>
+    <ion-card-title>Punto de venta</ion-card-title>
+    <!--<ion-card-subtitle><datagrid>Ingresos totales</datagrid></ion-card-subtitle>-->
+  </ion-card-header>
+  <ion-card-content>
+    <canvas #barChart></canvas>
+    </ion-card-content>
+  </div>
+  </ion-slide>
+
+
+      
+      </ion-slides>
+
+
+        
+      
+    </ion-card>
+  </ion-content>
+</ion-content>

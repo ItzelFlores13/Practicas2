@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+        <ion-title>Usuarios
+          <ion-icon name="accessibility"></ion-icon>
+        </ion-title>
+      
+    <ion-title>Datos opcionales </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-item>
+  <ion-label>Tipo de Sangre</ion-label>
+  <ion-select >
+    <ion-select-option >A+</ion-select-option>
+    <ion-select-option >A-</ion-select-option>
+    <ion-select-option >B+</ion-select-option>
+    <ion-select-option >B-</ion-select-option>
+    <ion-select-option >O+</ion-select-option>
+    <ion-select-option >O-</ion-select-option>
+    <ion-select-option >AB+</ion-select-option>
+    <ion-select-option >AB-</ion-select-option>
+  </ion-select>
+</ion-item>
+<ion-item><ion-label style="text-align: center;" >DIRECCIÓN</ion-label></ion-item>
+<ion-item><ion-label>Calle:</ion-label><ion-input [formControl]="calle"></ion-input></ion-item>
+<ion-item><ion-label>Colonia:</ion-label><ion-input [formControl]="col"></ion-input></ion-item>
+<ion-item><ion-label>Num Interior:</ion-label><ion-input [formControl]="numI"></ion-input>
+  <ion-label>Num Exterior:</ion-label><ion-input [formControl]="numE"></ion-input></ion-item>
+<ion-item><ion-label>Municipio:</ion-label><ion-input [formControl]="mun"></ion-input></ion-item>
+<ion-item><ion-label>Estado:</ion-label><ion-input [formControl]="estado"></ion-input></ion-item>
+<ion-item><ion-label>País:</ion-label><ion-input [formControl]="pais"></ion-input></ion-item>
+<ion-item><ion-label>Codigo Postal:</ion-label><ion-input [formControl]="cp"></ion-input></ion-item>
+
+<ion-item><ion-label style="text-align: center;" >CONTACTO DE EMERGENCIA</ion-label></ion-item>
+<ion-item><ion-label>Nombre Completo:</ion-label><ion-input [formControl]="nom"></ion-input></ion-item>
+<ion-item><ion-label>Telefono:</ion-label><ion-input [formControl]="tel"></ion-input></ion-item>
+
+<div class="row">
+  <ion-button  size="small" color="#64effc" [routerLink]="['/agregar-usuario']"><ion-icon name="arrow-back"></ion-icon>       
+  </ion-button>   
+  <ion-button size="small" type="submit" color="#64effc" [routerLink]="['/usuarios']">Cancelar</ion-button>
+  <ion-button  size="small" type="submit" color="#64effc">Guardar</ion-button>
+</div>
+</ion-content>
+
+

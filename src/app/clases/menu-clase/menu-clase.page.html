@@ -1,0 +1,33 @@
+<ion-header>
+ 
+	<ion-toolbar>
+	  
+	  <ion-title>Clases</ion-title>
+	</ion-toolbar>
+	  
+		<ion-toolbar >
+	  <ion-button expand="full" color="#6aeffc !important" class="searchB">
+		Sucursal
+		<ion-select >
+		  <ion-select-option >Sucursal1</ion-select-option>
+		  <ion-select-option value="2">Sucursal2</ion-select-option>
+		
+		</ion-select>
+	  </ion-button>
+	  <ion-searchbar class="search"></ion-searchbar>
+  
+  </ion-toolbar>
+  </ion-header>
+
+	<ion-content >
+		<ion-card>
+			<ion-title><h1>!Bienvenido!</h1></ion-title>
+			<img src="/assets/icon/oden-icon.svg">
+			<ion-text align:center>Aun no cuentas con clases registradas, comienza crenando un tipo de clase.</ion-text>
+			<ion-icon name="arrow-round-down"></ion-icon>
+		</ion-card>
+		<div class="row">
+			<ion-button size="small" type="submit" color="#64effc" [routerLink]="['/crear-clase']">Crear Clase</ion-button>
+		</div>
+  </ion-content>
+  
