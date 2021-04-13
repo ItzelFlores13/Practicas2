@@ -47,18 +47,8 @@ const routes: Routes = [
     path: 'notificacion',
     loadChildren: () => import('./notificacion/notificacion.module').then( m => m.NotificacionPageModule)
   },
-  {
-    path: 'periodos',
-    loadChildren: () => import('./clases/periodos/periodos.module').then( m => m.PeriodosPageModule)
-  },
-  {
-    path: 'editar-clase',
-    loadChildren: () => import('./clases/editar-clase/editar-clase.module').then( m => m.EditarClasePageModule)
-  },{
-    path: 'asistencia',
-    loadChildren: () => import('./clases/asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
-
-  }
+  
+  
   
 ];
 

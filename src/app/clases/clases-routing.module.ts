@@ -23,10 +23,7 @@ const routes: Routes = [
     path: 'editar-clase',
     loadChildren: () => import('./editar-clase/editar-clase.module').then( m => m.EditarClasePageModule)
   },
-  {
-    path: 'asistencia',
-    loadChildren: () => import('./asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
-  },
+  
 ];
 
 @NgModule({
