@@ -18,12 +18,28 @@ const routes: Routes = [
   {
     path: 'periodos',
     loadChildren: () => import('./periodos/periodos.module').then( m => m.PeriodosPageModule)
+  },{
+    path: 'crear-clase',
+    loadChildren: () => import('./Subpage/crear-clase/crear-clase.module').then(m => m.CrearClasePageModule)
+  },{
+    path: 'asistencia',
+    loadChildren: () => import ('./asistencia/asistencia.module').then(m => m.AsistenciaPageModule)
+   },
+  {
+    path: 'lista',
+    loadChildren: () => import('./lista/lista.module').then( m => m.ListaPageModule)
   },
   {
-    path: 'editar-clase',
-    loadChildren: () => import('./editar-clase/editar-clase.module').then( m => m.EditarClasePageModule)
+    path: 'horario',
+    loadChildren: () => import('./horario/horario.module').then( m => m.HorarioPageModule)
   },
+  {
+    path: 'crear-hora',
+    loadChildren: () => import('./crear-hora/crear-hora.module').then( m => m.CrearHoraPageModule)
+  }
+ 
   
+
 ];
 
 @NgModule({

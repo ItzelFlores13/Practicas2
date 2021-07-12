@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Artículos</ion-title>
+    <ion-title>Datos Opcionales</ion-title>
+  </ion-toolbar>
+</ion-header>
+<p></p><p></p>
+<ion-content>
+  <ion-label>Descuento Unitario</ion-label>
+  <ion-label>Cantidad descuento:
+    <ion-select>
+      <ion-select-option>1</ion-select-option>
+      <ion-select-option>2</ion-select-option>
+      <ion-select-option>3</ion-select-option>
+    </ion-select>
+  </ion-label>
+
+  <ion-label>Cantidad porcentaje
+    <ion-select>
+      <ion-select-option>1</ion-select-option>
+      <ion-select-option>2</ion-select-option>
+      <ion-select-option>3</ion-select-option>
+    </ion-select>
+  </ion-label>
+
+  <ion-label>Descuento Mayoreo:</ion-label>
+  <ion-label>Apartir de número de piezas:
+    <ion-select>
+      <ion-select-option>1</ion-select-option>
+      <ion-select-option>2</ion-select-option>
+      <ion-select-option>3</ion-select-option>
+    </ion-select>
+  </ion-label>
+
+  <ion-label>Cantidad descuento:
+    <ion-select>
+      <ion-select-option>1</ion-select-option>
+      <ion-select-option>2</ion-select-option>
+      <ion-select-option>3</ion-select-option>
+    </ion-select>
+  </ion-label>
+
+  <ion-label>Cantidad/porcentaje:
+    <ion-select>
+      <ion-select-option>1</ion-select-option>
+      <ion-select-option>2</ion-select-option>
+      <ion-select-option>3</ion-select-option>
+    </ion-select>
+  </ion-label>
+
+<ion-label>Tips:
+  <ion-textarea></ion-textarea>
+</ion-label>
+<div class="raw"> 
+<ion-button class="button1" (click)="accion1()">Variantes</ion-button>
+  <ion-card *ngIf="ocultar1" >
+    <ion-card-content><ion-button color ="#64effc important!" (click)="presentAlert()" >Añadir tipo Variante</ion-button>
+      </ion-card-content>
+    <ion-card-content> VARIANTE</ion-card-content>
+    <ion-card-content>Nombre:</ion-card-content>
+    <ion-card-content>Precio</ion-card-content>
+    <ion-card-content>Unidades:</ion-card-content>
+    <ion-card-content>Sku:</ion-card-content>
+    <ion-button color="black" class="bExtra">Añadir nueva Variante</ion-button>
+  </ion-card>
+
+</div>
+
+
+
+<div class="row">
+  <ion-icon class="icono" name="arrow-back-circle-outline" [routerLink]="['/add-articulo']"></ion-icon>
+  <ion-button size="small" type="submit"  color ="#424242" class="bExtra1"  [routerLink]="['/articulos']">Cancelar</ion-button>
+  <ion-button  size="small" type="submit" color ="#424242" class="bExtra1">Guardar</ion-button>
+</div>
+
+
+
+
+</ion-content>
+

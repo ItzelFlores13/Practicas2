@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title  style="text-align: center" >Entrenamiento</ion-title>
+    <ion-title  style="text-align: center">Agregar Sección</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+  <ion-label>Nombre de la sección: <ion-input></ion-input></ion-label>
+</ion-item>
+  <ion-item>
+    <ion-label>Tipo de sección: </ion-label>
+    <ion-select interface="popover">
+      <ion-select-option value="nes">tiempo</ion-select-option>
+      <ion-select-option value="n64">Fuerza</ion-select-option>
+      <ion-select-option value="ps">Distancia</ion-select-option>
+      <ion-select-option value="genesis">calidad</ion-select-option>
+      <ion-select-option value="saturn">intervalos</ion-select-option>
+      <ion-select-option value="snes">libre</ion-select-option>
+      <ion-select-option value="snes">AMRAP</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Tipo de resultado: </ion-label>
+    <ion-select interface="popover">
+      <ion-select-option value="nes">Libre</ion-select-option>
+      <ion-select-option value="n64">Minutos</ion-select-option>
+      <ion-select-option value="ps">Segundos</ion-select-option>
+      <ion-select-option value="genesis">Numero de repeticiones</ion-select-option>
+      <ion-select-option value="saturn">Libras</ion-select-option>
+      <ion-select-option value="snes">Kilogramos</ion-select-option>
+      <ion-select-option value="snes">Metros</ion-select-option>
+      <ion-select-option value="nes">Kilometros</ion-select-option>
+      <ion-select-option value="n64">Centimetros</ion-select-option>
+      <ion-select-option value="ps">Pulgadas</ion-select-option>
+      <ion-select-option value="genesis">Millas</ion-select-option>
+      <ion-select-option value="saturn">Calorías</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ionItem>
+    <ion-label position="stacked">Escribe Aquí</ion-label>
+    <ionTextarea disabled readonly value={text}>
+    </ionTextarea>
+  </ionItem>
+
+<div class="row">
+  <ion-button style="text-align: right;" size="small" type="submit" color="#64effc">Añadir Video</ion-button>
+</div>
+
+<div class="row">
+  <ion-icon class="icono"  name="arrow-back-circle-outline" [routerLink]="['/add-entre']"></ion-icon>
+  <ion-button size="small" tnota:sype="submit"  color ="red" class="bExtra1" >Eliminar</ion-button>
+  <ion-button  size="small" type="submit" color="#64effc">Guardar</ion-button>
+</div>
+</ion-content>

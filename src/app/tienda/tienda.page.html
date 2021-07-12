@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tienda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+      <ion-toolbar >
+    <ion-label>
+      Sucursal
+      <ion-select >
+        <ion-select-option >Sucursal1</ion-select-option>
+        <ion-select-option value="2">Sucursal2</ion-select-option>
+      
+      </ion-select>
+   </ion-label>
+
+    <ion-searchbar class="search"></ion-searchbar>
+</ion-toolbar>
+</ion-header>
+
+<ion-content style="text-align:center" >
+<ion-card><ion-item >
+  <ion-row align-item-center class="boton" >
+  <icon-button   class="button button-large" [routerLink]="['/categoria']">
+  <ion-icon class="icono" name="clipboard-outline"></ion-icon>
+  <ion-label >CATEGORÍA </ion-label>
+  </icon-button>
+  </ion-row></ion-item>
+  </ion-card>
+
+  <ion-card>
+  <ion-item >
+    <ion-row align-item-center class="boton" >
+    <icon-button   class="button button-large" [routerLink]="['/articulos']">
+    <ion-icon class="icono" name="bag-handle-outline"></ion-icon>
+    <ion-label color="light">ARTÍCULO </ion-label>
+    </icon-button>
+    </ion-row></ion-item>  
+  </ion-card>
+
+  <ion-card>
+    <ion-item >
+      <ion-row align-item-center class="boton" >
+      <icon-button   class="button button-large" [routerLink]="['/compras']">
+        <ion-icon class="icono" name="cash-outline"></ion-icon>
+      <ion-label color="light">COMPRAS APP </ion-label>
+      </icon-button>
+      </ion-row></ion-item>  
+  </ion-card>  
+</ion-content>     

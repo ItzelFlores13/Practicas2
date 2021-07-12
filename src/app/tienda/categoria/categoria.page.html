@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-title>Categoria</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-header>
+  <ion-toolbar >
+   <ion-label>
+      Sucursal
+      <ion-select >
+        <ion-select-option >Sucursal1</ion-select-option>
+        <ion-select-option value="2">Sucursal2</ion-select-option>
+      </ion-select>
+   </ion-label>
+   <div class="row">
+   <ion-searchbar class="search"></ion-searchbar>
+   <ion-icon name="add-circle-outline" class="icono" (click)="presentAlert()"></ion-icon></div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card style ="text-align: center;">
+    <p><ion-text>Parece que no cuentas con categorias para tus articulos</ion-text></p>
+    <p><ion-icon class="icono" name="sad-outline"></ion-icon></p>
+  </ion-card>
+
+  <ion-button color="black" (click)="presentAlert()">
+    Agrega Aquí
+  </ion-button>
+  <!----------------->
+  <ion-card (click)="presentAlert2()">
+    <img src="\assets\4.png">
+    <p><ion-text>Nombre de la categoría
+  </ion-text>
+  <ion-icon class="trash"  name="trash-outline"></ion-icon>
+   </p>
+  </ion-card>
+  
+</ion-content>
+<ion-icon class="icono" name="arrow-back-circle-outline" [routerLink]="['/tienda']"></ion-icon>

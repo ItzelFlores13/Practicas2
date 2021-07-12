@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Notificaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-title>Contenido: <ion-input></ion-input></ion-title>
+  <ion-card>
+    <ion-title><button (click)="accion1()">¿Programar esta notificación?</button></ion-title>
+  <ion-card *ngIf="ocultar1" >
+    <ion-card-content>Fecha:</ion-card-content>
+    <ion-card-content> Hora:</ion-card-content>
+    <ion-card-content>¿A qué sección debe llegar?</ion-card-content>
+    <ion-card-content>¿A que sucursal debe llegar?</ion-card-content>
+
+  </ion-card>
+  </ion-card>
+
+  
+
+
+  
+
+  <ion-icon name="arrow-back-circle-outline" [routerLink]="['/notificacion']"></ion-icon>
+  <ion-button>Añadir</ion-button>
+
+</ion-content>

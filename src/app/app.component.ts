@@ -1,19 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-
+import {MuroPage} from './muro/muro.page';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { LoginPage } from './login/login.page';
+import {Events} from 'ionic-angular';
+import { GoogleAnalytics } from '@ionic-native/google-analytics/ngx';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
+import { qrService } from './services/qr-service';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
+    rootPage: any  ;
+    
   public selectedIndex = 0;
   public appPages = [
      {
       title: 'Login',
       url: '/login',
+      icon: 'easel',
+    },
+    {
+      title: 'Muro Principal',
+      url: '/muro',
       icon: 'easel',
     },
     {
@@ -39,12 +51,12 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Tienda',
-      url: '/cuarta',
+      url: '/tienda',
       img: 'assets/icon/icono tienda.png'
     },
     {
       title: 'Entrenamientos',
-      url: '/quinta',
+      url: '/entrenamiento',
       img: 'assets/icon/entrenamientos.svg'
     },
     {
@@ -56,23 +68,21 @@ export class AppComponent implements OnInit {
 
   constructor(
     private platform: Platform,
-    private splashScreen: SplashScreen
+    private splashScreen: SplashScreen,
+    public storage: Storage,
+    private ga: GoogleAnalytics,
+    public events: Events,
+    private nativeAudio: NativeAudio,
+    private qrs:qrService
   ) {
-    this.initializeApp();
-  }
-
-  initializeApp() {
-    this.platform.ready().then(() => {
-      
-      this.splashScreen.hide();
-    });
-  }
-
-  ngOnInit() {
-    const path = window.location.pathname.split('folder/')[1];
-    if (path !== undefined) {
-      this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+      platform.ready().then(() => {
+        this.storage.get("valid").then(valid=>{
+    if (valid == true ){
+      this.rootPage = MuroPage;
+    } else {
+      this.rootPage = LoginPage;
     }
   }
+      )});
 }
-
+}

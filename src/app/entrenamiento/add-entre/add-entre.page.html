@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Entrenamiento</ion-title>
+    <ion-title >Agregar Entrenamiento</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item><ion-label>Nombre:</ion-label><ion-input ></ion-input></ion-item>
+  <ion-item><ion-label>Descripción:</ion-label><ion-input ></ion-input></ion-item>
+  <ion-item>
+    <ion-label color="white" >Fecha de entrenamiento:</ion-label>
+    <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="white" >Fecha de publicación:</ion-label>
+    <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+  </ion-item>  
+ 
+  <ion-item>
+    <ion-label>¿Enviar Notificacion?</ion-label>
+      <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+  </ion-item>
+
+  <div class="row">
+  <ion-button size="small" type="submit" color ="black" class="bExtra" [routerLink]="['/add-seccion']">Agregar seccion</ion-button> 
+  <ion-button size="small" type="submit" color ="black" class="bExtra" [routerLink]="['/add-biblio']">Agregar Biblioteca</ion-button>
+  </div>
+
+  <div class="row">
+    <ion-button size="small" type="submit"  color ="#424242" class="bExtra1" [routerLink]="['/entrenamiento']">Cancelar</ion-button>
+    <ion-button  size="small" type="submit" color="#64effc">Guardar</ion-button>
+  </div>
+
+</ion-content>
+
+

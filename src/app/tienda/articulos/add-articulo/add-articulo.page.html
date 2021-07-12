@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Artículos</ion-title>
+    <ion-title>Agregar Artículos</ion-title>
+  </ion-toolbar>
+</ion-header>
+<p></p><p></p>
+<ion-content>
+  <ion-label>Nombre del producto: <ion-input></ion-input></ion-label>
+  <ion-label>Unidades Disponibles
+    <ion-select>
+      <ion-select-option>1</ion-select-option>
+      <ion-select-option>2</ion-select-option>
+      <ion-select-option>3</ion-select-option>
+    </ion-select>
+  </ion-label>
+
+  <ion-label>Precio
+    <ion-select>
+      <ion-select-option>1</ion-select-option>
+      <ion-select-option>2</ion-select-option>
+      <ion-select-option>3</ion-select-option>
+    </ion-select>
+  </ion-label>
+
+  <ion-label>Categoría
+    <ion-select>
+      <ion-select-option>1</ion-select-option>
+      <ion-select-option>2</ion-select-option>
+      <ion-select-option>3</ion-select-option>
+    </ion-select>
+  </ion-label>
+<ion-label>Descripción:
+  <ion-textarea></ion-textarea>
+</ion-label>
+<div class="raw">
+<ion-icon class="icono" name="camera-outline"></ion-icon> 
+<ion-button color="black" class="bExtra">Imagenes max(5)</ion-button></div>
+
+<p>¿Esconder de la aplicación? <ion-checkbox color="primary" checked slot="start"></ion-checkbox></p>
+<p>¿Este producto acumula puntos? <ion-checkbox color="primary" (click)="presentAlert()" checked slot="start" ></ion-checkbox></p>
+
+<div class="row">
+  <ion-button size="small" type="submit"  color ="#424242" class="bExtra1" [routerLink]="['/articulos']">Cancelar</ion-button>
+  <ion-button  size="small" type="submit" color="#64effc"class="guardar">Guardar</ion-button>
+  <ion-icon class="icono" name="arrow-forward-circle-outline" [routerLink]="['/op-a']"></ion-icon>  
+</div>
+
+
+
+
+</ion-content>

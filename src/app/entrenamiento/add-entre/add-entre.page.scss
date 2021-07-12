@@ -1,0 +1,41 @@
+ion-title{
+    color: white;
+   
+}
+
+ion-content{
+    color: blanchedalmond;
+} ion-item ion-label{
+    color:aliceblue;
+}
+ion-button  {
+color:  black;
+background-color:#64effc;
+text-align:  center; 
+border-radius:  12px; 
+font-family:  'IBM Plex Sans', sans-serif; 
+filter:  drop-shadow(0 4px 10px darken(#303030, 40%));         
+} .bExtra{
+    color:  white;
+background-color:black;
+text-align:  center; 
+border-radius:  12px; 
+font-family:  'IBM Plex Sans', sans-serif; 
+filter:  drop-shadow(0 4px 10px darken(#303030, 40%)); 
+
+} .bExtra1{
+    color:white;
+    background-color: red;
+}ion-content ion-item ion-select ion-select-option {
+    // overwrite inline styles
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    color:aliceblue;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }.icono{
+      zoom: 2.5;
+      color: #64effc;
+  }

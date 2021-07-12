@@ -1,0 +1,43 @@
+<ion-header>
+	<ion-toolbar>	  
+	  <ion-title>Asistencia</ion-title>
+	</ion-toolbar>
+	  
+		<ion-toolbar >
+	  <ion-button expand="full" color="#6aeffc !important" class="searchB">
+		Sucursal
+		<ion-select >
+		  <ion-select-option >Sucursal1</ion-select-option>
+		  <ion-select-option value="2">Sucursal2</ion-select-option>
+		
+		</ion-select>
+	  </ion-button>
+	  <ion-searchbar class="search"></ion-searchbar>
+  </ion-toolbar>
+  <ion-toolbar>
+	<ion-item >
+		<ion-label >Fecha</ion-label>
+		<ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+	  </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-card>
+		<ion-title><button ion-button block (click)="accion1()" style="font-size:35px !important" > NOMBRE DE LA CLASE</button> </ion-title>
+		<ion-title color="#64effc">HORARIOS</ion-title>
+		<ion-card *ngIf="ocultar1" [routerLink]="['/lista']">
+			<ion-card-content>Día:</ion-card-content>
+			<ion-card-content> Inicio:</ion-card-content>
+			<ion-card-content>Hora Fin:</ion-card-content>
+			<ion-card-content>Entrenamiento:</ion-card-content>
+			<ion-card-content>Cupo:</ion-card-content>
+			<ion-card-content>Profesor:</ion-card-content>
+		</ion-card>
+	</ion-card>
+
+	<ion-icon class="return" name="arrow-back-circle-outline"  [routerLink]="['/clases']"></ion-icon>
+
+	
+</ion-content>
+

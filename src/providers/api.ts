@@ -21,7 +21,7 @@ export class Api {
   ) {
     //NOTAS DEL PROGRAMADOR: ESTA CAMBIALA DEPENDIENDO DE SI QUIERES USAR LOCAL O NRUTAS
     //Endpoints
-    this.socket = "https://api.oden.mx/api/";
+    this.socket = "https://ylm.oden.mx/api/";
     //this.socket = "https://lcg.oden.mx/api/";
   }
 

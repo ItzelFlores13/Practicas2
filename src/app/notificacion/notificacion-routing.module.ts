@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: NotificacionPage
+  },
+  {
+    path: 'crear',
+    loadChildren: () => import('./crear/crear.module').then( m => m.CrearPageModule)
   }
 ];
 

@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Horario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item >
+    <ion-label>Tipo de clase:</ion-label>
+  <ion-select >
+    <ion-select-option value="f">Clase1</ion-select-option>
+    <ion-select-option value="m">Clase2</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item >
+  <ion-label>Entrenador:</ion-label>
+<ion-select >
+  <ion-select-option value="f">Entrenador1</ion-select-option>
+  <ion-select-option value="m">Entrenador2</ion-select-option>
+</ion-select>
+</ion-item>
+
+  <ion-item><ion-label>Cupo:</ion-label><ion-input ></ion-input></ion-item>
+  <ion-item><ion-label>Nota:</ion-label><ion-input ></ion-input></ion-item>
+
+  <ion-item><ion-icon class="icono" name="flag-outline" ></ion-icon><ion-button style ="color:#64effc;" color="light"  (click)="accion1()">Unico:</ion-button></ion-item>
+		<ion-card *ngIf="ocultar1" >
+			<ion-card-content>Día:</ion-card-content>
+			<ion-card-content> Hora Inicio:</ion-card-content>
+			<ion-card-content>Hora Fin:</ion-card-content>
+	</ion-card>
+
+  <ion-item><ion-icon class="icono" name="play-forward-outline" ></ion-icon><ion-button (click)="accion2()" style ="color:#64effc;" color="light">Repetitivo:</ion-button></ion-item>
+		<ion-card *ngIf="ocultar2" >
+      <ion-card-content>Día:</ion-card-content>
+			<ion-card-content> Hora Inicio:</ion-card-content>
+			<ion-card-content>Hora Fin:</ion-card-content>
+
+      <ion-icon class="icono" style="size:2px" name="add-circle-outline"></ion-icon>
+      <ion-icon  class="trash" name="trash-outline"></ion-icon>
+		</ion-card>
+
+</ion-content>
+
+<div class="row">
+  <ion-button size="small" type="submit"  color="gray important!" [routerLink]="['/horario']">Cancelar</ion-button>
+  <ion-button  size="small" type="submit" color="#64effc">Guardar</ion-button>
+</div>

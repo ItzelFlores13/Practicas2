@@ -2,7 +2,7 @@
     text-align: center;
     
 }.icono{
-    color:#6aeffc;
+    color:hsl(185, 96%, 70%);
     zoom:2.5;
 }ion-content {
     // overwrite inline styles
@@ -14,4 +14,7 @@
     }}
     ion-card-title{
         color: white;
+    }
+    ion-title{
+        color:antiquewhite;
     }

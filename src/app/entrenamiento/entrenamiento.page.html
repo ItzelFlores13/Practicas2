@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Entrenamiento</ion-title>
+    <ion-searchbar class="search"></ion-searchbar>
+    <ion-item >
+      <ion-label color="white" >Tipo de Entrenamiento</ion-label> 
+      <ion-icon [routerLink]="['/add-entre']" class="icono" name="add-circle-outline"></ion-icon>
+
+      
+    </ion-item>
+      <ion-item>
+      <ion-label color="white" >Fecha</ion-label>
+      <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+      </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card >
+    <ion-title>Fecha</ion-title>
+    <ion-title>Entrenamiento</ion-title>
+    
+    <ion-icon [routerLink]="['/mod-entre']" class="icono" name="create-outline"></ion-icon>
+    <ion-icon (click)="presentAlert()" class="trash" name="trash-outline"></ion-icon>
+</ion-card>
+
+
+</ion-content>
